@@ -1,11 +1,11 @@
 import React from "react";
 
 const getLinkTo = url => chrome.runtime.getURL(url);
-const openLinkTo = url => event => {
-  event.preventDefault();
-  chrome.tabs.create({ url: getLinkTo(url) });
-}
 
+const onLinkClicked = event => {
+  event.preventDefault();
+  chrome.tabs.create({ url: event.target.href });
+}
 
 export default () => (
   <>
@@ -14,6 +14,7 @@ export default () => (
       This is the web page that will be used for popups
       in the Chrome extension...
     </p>
-    <p>Link: <a href={getLinkTo('index.html')} onClick={openLinkTo('index.html')}>index.html</a></p>
+    <p>Link: <a href={getLinkTo('index.html')} onClick={onLinkClicked}>index.html</a></p>
+    <p>Open <a href="https://developer.chrome.com/extensions/getstarted" onClick={onLinkClicked}>the chrome developer site</a></p>
   </>
 );
