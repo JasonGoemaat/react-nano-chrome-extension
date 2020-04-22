@@ -1,3 +1,8 @@
+// this is a separate CSS so it can change the styles on the page
+main#gc-pagecontent {
+    border: solid 2px red;
+}
+
 div.content-script-host {
     background-color: white;
     border: solic 1px transparent;

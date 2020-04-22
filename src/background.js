@@ -1,1 +1,0 @@
-console.log('%cBACKGROUND SCRIPT%c running', 'background-color: blue; color: white; font-size: large; border-radius: 9px; padding: 2px 6px', '');

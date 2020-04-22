@@ -9,7 +9,7 @@
     },
     "background": {
         "scripts": [
-            "./background.js"
+            "./background.ts"
         ],
         "persistent": false
     },
@@ -25,5 +25,12 @@
         "css": ["ContentScripts/ChromeDeveloper/index.scss"]
       }
     ],
-    "permissions": []
+    "chrome_url_overrides" : {
+      "newtab": "newtab.html"
+    },
+    "permissions": [
+      "activeTab",
+      "geolocation",
+      "*://www.metaweather.com/*"
+    ]
   }

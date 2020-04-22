@@ -12,8 +12,6 @@ if (!document.getElementById(id)) {
     div.classList.add('content-script-host');
     document.body.prepend(div);
 }
-
-if (!document.getElementById(''))
 ReactDOM.render(<App />, document.getElementById(id));
 
 /*
